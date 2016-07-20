@@ -1,0 +1,31 @@
+import sys
+import create
+import enter
+import clone
+import remove
+from utils import text, getRootDir
+import os
+
+def checkArgs():
+    rootDir = getRootDir.getRoot()
+    if not os.path.exists(rootDir + "/.shiply"):
+        os.mkdir(rootDir + "/.shiply")
+
+    if len(sys.argv) < 2:
+        sys.exit(text.helperText)
+    
+    functions = {
+        "create":create.create,
+        "clone":clone.clone,
+        "enter":enter.enter,
+        "remove":remove.remove,
+    }
+
+    mainCmd = sys.argv[1]
+    if mainCmd in functions:
+        functions[mainCmd]()
+    else:
+        sys.exit(text.helperText)
+
+if __name__ == "__main__":
+    checkArgs()
