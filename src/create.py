@@ -19,14 +19,11 @@ def createDir(name, root):
     return False
 
 def copyBaseFiles(name, root):
-    # Use os.walk instead
+    root = root + "/" + name
     print text.copyingFiles
-    dest = "{}/{}".format(root, name)
-    shutil.copytree("/bin", dest+"/bin")
-    shutil.copytree("/lib", dest+"/lib")
-    if os.path.exits("/lib64"):
-        shutil.copytree("/lib64", dest+"/lib64")
-
+    for directory in ["/bin", "/lib", "/lib64"]:
+        shutil.copytree(directory, root + directory, symlinks=True)
+        
 def create():
     root = getRootDir.getRoot() + "/.shiply"
     template = getTemplate()
@@ -34,5 +31,5 @@ def create():
     if not createDir(name, root):
         sys.exit(text.envAlreadyExists)
     copyBaseFiles(name, root)
-    print test.envCreated
+    print text.envCreated
 
