@@ -1,15 +1,9 @@
 import os
-from utils import getRootDir, text
+from utils import getRootDir, text, getArg
 import sys
 import re
 import string
 import shutil
-
-def getTemplate():
-    check = re.findall("-t [a-zA-Z0-9{}]+".format(string.punctuation), ' '.join(sys.argv))
-    if check:
-        return check[0]
-    return None
 
 def createDir(name, root):
     print text.createDir
@@ -26,7 +20,9 @@ def copyBaseFiles(name, root):
         
 def create():
     root = getRootDir.getRoot() + "/.shiply"
-    template = getTemplate()
+    template = getArg.getArg("-t")
+    if len(sys.argv) < 3:
+        sys.exit(text.createHelper)
     name = sys.argv[2]
     if not createDir(name, root):
         sys.exit(text.envAlreadyExists)

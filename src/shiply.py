@@ -3,6 +3,7 @@ import create
 import enter
 import clone
 import remove
+import list as list_
 from utils import text, getRootDir
 import os
 
@@ -19,6 +20,7 @@ def checkArgs():
         "clone":clone.clone,
         "enter":enter.enter,
         "remove":remove.remove,
+        "list":list_.list,
     }
 
     mainCmd = sys.argv[1]
