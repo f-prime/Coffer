@@ -9,8 +9,8 @@ import os
 
 def checkArgs():
     rootDir = getRootDir.getRoot()
-    if not os.path.exists(rootDir + "/.shiply"):
-        os.mkdir(rootDir + "/.shiply")
+    if not os.path.exists(rootDir + "/.coffer"):
+        os.mkdir(rootDir + "/.coffer")
 
     if len(sys.argv) < 2:
         sys.exit(text.helperText)

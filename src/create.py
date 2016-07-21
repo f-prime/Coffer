@@ -18,7 +18,7 @@ def copyBaseFiles(path):
         shutil.copytree(directory, path + directory, symlinks=True)
         
 def create():
-    root = getRootDir.getRoot() + "/.shiply"
+    root = getRootDir.getRoot() + "/.coffer"
     template = getArg.getArg("-t")
     if len(sys.argv) < 3:
         sys.exit(text.createHelper)

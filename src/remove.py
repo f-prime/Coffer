@@ -11,7 +11,7 @@ def checkIfExists(path):
     return os.path.exists(path)
 
 def remove():
-    rootDir = getRootDir.getRoot() + "/.shiply"
+    rootDir = getRootDir.getRoot() + "/.coffer"
     if len(sys.argv) < 3:
         sys.exit(text.removeHelper)
     name = sys.argv[2]

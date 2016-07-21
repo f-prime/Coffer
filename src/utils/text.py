@@ -1,10 +1,10 @@
-helperText = """Shiply Help
+helperText = """Coffer Help
 
-shiply create <name> [-t <template>]
-shiply enter <name> [-c <command>]
-shiply list
-shiply clone <name> <clone_name>
-shiply remove <name>
+coffer create <name> [-t <template>]
+coffer enter <name> [-c <command>]
+coffer list
+coffer clone <name> <clone_name>
+coffer remove <name>
 """
 
 envAlreadyExists = "An environment by that name already exists."
@@ -13,9 +13,9 @@ envDoesntExist = "There is no environment by that name."
 notRoot = "Must be root to execute this command."
 noEnvs = "There aren't any environments currently created"
 
-createHelper = "Usage: shiply create <name> [-t <template>]"
-enterHelper = "Usage: shiply enter <name> [-c <command>]"
-removeHelper = "Usage: shiply remove <name>"
+createHelper = "Usage: coffer create <name> [-t <template>]"
+enterHelper = "Usage: coffer enter <name> [-c <command>]"
+removeHelper = "Usage: coffer remove <name>"
 removed = "Environment has been removed"
 removingEnv = "Removing environment"
 createDir = "Creating environment directory"

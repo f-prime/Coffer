@@ -14,7 +14,7 @@ def executeCommand(command="/bin/bash"):
 def enter():
     if not isRoot.isRoot():
         sys.exit(text.notRoot)
-    rootDir = getRootDir.getRoot() + "/.shiply"
+    rootDir = getRootDir.getRoot() + "/.coffer"
     if len(sys.argv) < 3:
         sys.exit(text.enterHelper)
     name = sys.argv[2]
