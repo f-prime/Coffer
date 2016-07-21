@@ -5,18 +5,17 @@ import re
 import string
 import shutil
 
-def createDir(name, root):
+def createDir(path):
     print text.createDir
-    if not os.path.exists("{}/{}".format(root, name)):
-        os.mkdir("{}/{}".format(root, name))
+    if not os.path.exists(path):
+        os.mkdir(path)
         return True
     return False
 
-def copyBaseFiles(name, root):
-    root = root + "/" + name
+def copyBaseFiles(path):
     print text.copyingFiles
     for directory in ["/bin", "/lib", "/lib64"]:
-        shutil.copytree(directory, root + directory, symlinks=True)
+        shutil.copytree(directory, path + directory, symlinks=True)
         
 def create():
     root = getRootDir.getRoot() + "/.shiply"
@@ -24,9 +23,10 @@ def create():
     if len(sys.argv) < 3:
         sys.exit(text.createHelper)
     name = sys.argv[2]
-    if not createDir(name, root):
+    path = root + "/" + name
+    if not createDir(path):
         sys.exit(text.envAlreadyExists)
-    copyBaseFiles(name, root)
+    copyBaseFiles(path)
     if template:
         print template
     print text.envCreated
