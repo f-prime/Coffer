@@ -1,5 +1,9 @@
 import os
-from utils import getRootDir
+from utils import getRootDir, text
 
 def list():
-    print '\n'.join(os.listdir(getRootDir.getRoot() + "/.shiply"))
+    check = os.listdir(getRootDir.getRoot() + "/.shiply")
+    if len(check) == 0:
+        print text.noEnvs
+    else:
+        print '\n'.join(check)

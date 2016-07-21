@@ -27,5 +27,7 @@ def create():
     if not createDir(name, root):
         sys.exit(text.envAlreadyExists)
     copyBaseFiles(name, root)
+    if template:
+        print template
     print text.envCreated
 
