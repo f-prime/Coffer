@@ -4,6 +4,7 @@ import text
 import re
 import shutil
 import getRootDir
+import ccopy
 
 def copyProgram(path):
     if not os.path.exists(path):
@@ -38,7 +39,7 @@ def copyDir(path):
     else:
         split = filter(None, path.split("/"))
         createPath(split[:-1])
-        shutil.copytree(path, getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" + path, symlinks=True)
+        ccopy.copy(path, getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" + path)
 
 def createPath(path):
     root = getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" 

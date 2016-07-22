@@ -1,9 +1,8 @@
 import os
-from utils import getRootDir, text, getArg
+from utils import getRootDir, text, getArg, ccopy
 import sys
 import re
 import string
-import shutil
 import imp
 
 def createDir(path):
@@ -15,9 +14,10 @@ def createDir(path):
 
 def copyBaseFiles(path):
     print text.copyingFiles
-    for directory in ["/bin", "/lib", "/lib64"]:
-        shutil.copytree(directory, path + directory, symlinks=True)
-
+    for directory in ["/bin", "/lib", "/lib64", "/var", "/etc", "/usr", "/dev"]:
+        print "Copying {}".format(directory)
+        ccopy.copy(directory, path + directory)        
+        
 def executeTemplate(template):
     try:
         imp.load_source(template.split(".")[0], template)

@@ -1,11 +1,11 @@
-from utils import getRootDir, text
+from utils import getRootDir, text, ccopy
 import shutil
 import sys
 import os
 
 def copyEnv(path, to):
     print text.cloning
-    shutil.copytree(path, to, symlinks=True)
+    ccopy.ccopy(path, to)
 
 def envExists(path):
     return os.path.exists(path)
