@@ -4,6 +4,7 @@ import sys
 import re
 import string
 import shutil
+import imp
 
 def createDir(path):
     print text.createDir
@@ -19,9 +20,10 @@ def copyBaseFiles(path):
 
 def executeTemplate(template):
     try:
-        templateFunc = __import__(template)
-        print test.templateSuccess
-    except ImportError, e:
+        print template
+        imp.load_source(template.split(".")[0], template)
+        print text.templateSuccess
+    except Exception, e:
         print e
         print text.invalidTemplate
 
