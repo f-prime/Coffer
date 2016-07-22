@@ -1,5 +1,5 @@
 import getArg
 import getRootDir
 import isRoot
-import templateFunctions
+import templateUtils
 import text

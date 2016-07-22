@@ -20,7 +20,6 @@ def copyBaseFiles(path):
 
 def executeTemplate(template):
     try:
-        print template
         imp.load_source(template.split(".")[0], template)
         print text.templateSuccess
     except Exception, e:

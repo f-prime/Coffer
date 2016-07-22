@@ -22,19 +22,42 @@ def copyProgram(path):
             createPath(split)
             copyDep(dep)
 
+def copyFile(path):
+    if not os.path.exists(path):
+        print text.fileDoesNotExist.format(path)
+    else:
+        split = path.split("/")
+        split = split[:len(split)-1]
+        createPath(split)
+        copyDep(path)
+        
+
+def copyDir(path):
+    if not os.path.exists(path):
+        print text.folderDoesNotExist.format(path)
+    else:
+        split = filter(None, path.split("/"))
+        createPath(split)
+        print path
+        shutil.copytree(path, getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" + split[-1], symlinks=True)
+
 def createPath(path):
-    root = getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/"
+    root = getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" 
     for p in path:
         root += "/" + p
         if not os.path.exists(root):
             os.mkdir(root)
-
+        
 def copyDep(dep):
     root = getRootDir.getRoot() + "/.coffer/" + getEnvName()
     shutil.copy(dep, root + dep)
 
 def executeCommand(command):
-    pass
+    rr = os.open("/", os.O_RDONLY)
+    os.chroot(getRootDir.getRoot() + "/.coffer/" + getEnvName())
+    os.system(command)
+    os.fchdir(rr)
+    os.chroot(".")
 
 def getEnvName():
     # This has to work because `create` has already checked that the syntax is correct.

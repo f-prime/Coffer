@@ -17,6 +17,8 @@ envDoesntExist = "There is no environment by that name."
 envDoesntExistVar = "There is no environment by the name {}"
 
 programDoesNotExist = "There is no program found by the name {}"
+fileDoesNotExist = "There is no file found by the name {}"
+folderDoesNotExist = "There is no folder found by the name {}"
 
 notRoot = "Must be root to execute this command."
 noEnvs = "There aren't any environments currently created"
