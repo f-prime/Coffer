@@ -37,9 +37,9 @@ def copyDir(path):
         print text.folderDoesNotExist.format(path)
     else:
         split = filter(None, path.split("/"))
-        createPath(split)
-        print path
-        shutil.copytree(path, getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" + split[-1], symlinks=True)
+        createPath(split[:-1])
+        print getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" + path
+        shutil.copytree(path, getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" + path, symlinks=True)
 
 def createPath(path):
     root = getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" 
