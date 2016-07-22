@@ -33,13 +33,8 @@ def copyDep(dep):
     root = getRootDir.getRoot() + "/.coffer/" + getEnvName()
     shutil.copy(dep, root + dep)
 
-
 def executeCommand(command):
-    rr = os.open("/", os.O_RDONLY)
-    os.chroot(getRootDir() + "/.coffer/" + getEnvName)
-    os.system(command)
-    os.fchdir(rr)
-    os.chroot(".")
+    pass
 
 def getEnvName():
     # This has to work because `create` has already checked that the syntax is correct.

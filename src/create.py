@@ -20,8 +20,10 @@ def copyBaseFiles(path):
 def executeTemplate(template):
     try:
         templateFunc = __import__(template)
-    except ImportError:
-        print "Hmm"
+        print test.templateSuccess
+    except ImportError, e:
+        print e
+        print text.invalidTemplate
 
 def create():
     root = getRootDir.getRoot() + "/.coffer"

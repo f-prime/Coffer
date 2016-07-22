@@ -7,6 +7,9 @@ coffer clone <name> <clone_name>
 coffer remove <name>
 """
 
+invalidTemplate = "Template is either invalid or does not exist"
+templateSuccess = "Template has been executed successfully"
+
 envAlreadyExists = "An environment by that name already exists."
 envAlreadyExistsVar = "An environment by the name {} already exists."
 
