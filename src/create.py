@@ -16,7 +16,13 @@ def copyBaseFiles(path):
     print text.copyingFiles
     for directory in ["/bin", "/lib", "/lib64"]:
         shutil.copytree(directory, path + directory, symlinks=True)
-        
+
+def executeTemplate(template):
+    try:
+        templateFunc = __import__(template)
+    except ImportError:
+        print "Hmm"
+
 def create():
     root = getRootDir.getRoot() + "/.coffer"
     template = getArg.getArg("-t")
@@ -28,6 +34,6 @@ def create():
         sys.exit(text.envAlreadyExists)
     copyBaseFiles(path)
     if template:
-        print template
+        executeTemplate(template)
     print text.envCreated
 
