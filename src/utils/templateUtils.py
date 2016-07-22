@@ -38,7 +38,6 @@ def copyDir(path):
     else:
         split = filter(None, path.split("/"))
         createPath(split[:-1])
-        print getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" + path
         shutil.copytree(path, getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" + path, symlinks=True)
 
 def createPath(path):
