@@ -33,7 +33,7 @@ How can I get started?
 3. In a terminal execute `coffer create first_env`
 4. Then `coffer enter first_env`
 
-Then like that you have created your first environment! For more extensive getting started docs, read our [Getting Started](https://github.com/Max00355/Coffer/blob/master/docs/Templates.md) docs.
+Then like that you have created your first environment! For more extensive getting started docs, read our [Getting Started](https://github.com/Max00355/Coffer/blob/master/docs/GettingStarted.md) docs.
 
 Current Status
 ==============
