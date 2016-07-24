@@ -1,9 +1,10 @@
 import os
-from utils import getRootDir, text, getArg, ccopy
+from utils import getRootDir, text, getArg, ccopy, templateUtils
 import sys
 import re
 import string
 import imp
+import urllib
 
 def createDir(path):
     print text.createDir
@@ -14,8 +15,19 @@ def createDir(path):
 
 def copyBaseFiles(path):
     print text.copyingFiles
-    debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap xenial {}"
+    debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap precise {}"
     os.system(debCmd.format(path))
+
+    # Debootstrap does not install a decent source.list, so we have to do it here
+
+    with open(path + "/etc/apt/sources.list", 'w') as f:
+        f.write(urllib.urlopen("https://help.ubuntu.com/12.04/sample/sources.list").read())
+
+    # Then we have to add keys since we are using a  new source list.
+
+    templateUtils.executeCommand("gpg --keyserver keyserver.ubuntu.com --recv 3E5C1192")
+    templateUtils.executeCommand("gpg --export --armor 3E5C1192 | sudo apt-key add -")
+    templateUtils.executeCommand("apt-get update")
 
 def executeTemplate(template):
     try:
