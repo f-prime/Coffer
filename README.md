@@ -1,7 +1,7 @@
 Overview
 =====
 
-A lightweight file system container for creating isolated development environments.
+A lightweight platform for creating isolated and portable development environments.
 
 What is Coffer?
 ===============
@@ -10,8 +10,8 @@ Before I talk about what Coffer is, let me say what Coffer is *not*. Coffer is n
 you're probably better off using Docker, or some other container software. Coffer is also not intended to be used as a secure means by which to isolate an application, and
 it is recommended that Coffer not be used outside of a development setting. 
 
-Coffer is a filesystem container. It is intended to be used to create isolated development environments without having to worry about doing any network configuration.
-Applications that are run in Coffer can be accessed outside of a coffer environment through localhost without having to do any more than `coffer create devenv`. 
+Coffer is a platform for creating isolated filesystem containers. It is intended to be used to create isolated development environments without having to worry about doing any network configuration.
+Applications that are run in Coffer can be accessed outside of a Coffer environment through `localhost` without having to do anything more than `coffer create <name>`. 
 This makes it easy to get environments up and running for those of us who do not need network isolation, and only wish to islolate an app and its dependencies.
 
 Coffer makes it easy to create, enter, and share environments with others.
