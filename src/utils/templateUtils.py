@@ -39,22 +39,22 @@ def copyDir(path):
     else:
         split = filter(None, path.split("/"))
         createPath(split[:-1])
-        ccopy.copy(path, getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" + path)
+        ccopy.copy(path, getRootDir.getRoot() + "/.coffer/envs/" + getEnvName() + "/" + path)
 
 def createPath(path):
-    root = getRootDir.getRoot() + "/.coffer/" + getEnvName() + "/" 
+    root = getRootDir.getRoot() + "/.coffer/envs/" + getEnvName() + "/" 
     for p in path:
         root += "/" + p
         if not os.path.exists(root):
             os.mkdir(root)
         
 def copyDep(dep):
-    root = getRootDir.getRoot() + "/.coffer/" + getEnvName()
+    root = getRootDir.getRoot() + "/.coffer/envs/" + getEnvName()
     shutil.copy(dep, root + dep)
 
 def executeCommand(command):
     rr = os.open("/", os.O_RDONLY)
-    os.chroot(getRootDir.getRoot() + "/.coffer/" + getEnvName())
+    os.chroot(getRootDir.getRoot() + "/.coffer/envs/" + getEnvName())
     os.system(command)
     os.fchdir(rr)
     os.chroot(".")

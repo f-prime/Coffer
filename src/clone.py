@@ -17,8 +17,8 @@ def clone():
     name = sys.argv[2]
     clone = sys.argv[3]
 
-    path = getRootDir.getRoot() + "/.coffer/" + name
-    clonePath = getRootDir.getRoot() + "/.coffer/" + clone
+    path = getRootDir.getRoot() + "/.coffer/envs/" + name
+    clonePath = getRootDir.getRoot() + "/.coffer/envs/" + clone
 
     if not envExists(path):
         sys.exit(text.envDoesntExistVar.format(name))

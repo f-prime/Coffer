@@ -26,7 +26,7 @@ def executeTemplate(template):
         print text.invalidTemplate
 
 def create():
-    root = getRootDir.getRoot() + "/.coffer"
+    root = getRootDir.getRoot() + "/.coffer/envs"
     template = getArg.getArg("-t")
     if len(sys.argv) < 3:
         sys.exit(text.createHelper)

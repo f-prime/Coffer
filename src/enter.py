@@ -14,7 +14,7 @@ def executeCommand(command="/bin/bash"):
 def enter():
     if not isRoot.isRoot():
         sys.exit(text.notRoot)
-    rootDir = getRootDir.getRoot() + "/.coffer"
+    rootDir = getRootDir.getRoot() + "/.coffer/envs"
     if len(sys.argv) < 3:
         sys.exit(text.enterHelper)
     name = sys.argv[2]
