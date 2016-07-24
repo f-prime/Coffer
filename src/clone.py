@@ -5,7 +5,7 @@ import os
 
 def copyEnv(path, to):
     print text.cloning
-    ccopy.ccopy(path, to)
+    ccopy.copy(path, to)
 
 def envExists(path):
     return os.path.exists(path)
