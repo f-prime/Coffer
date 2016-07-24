@@ -31,7 +31,7 @@ And like that you are now in your first coffer environment! You can now install 
 
 Coffer gives the ability to create templates for environments which automatically executes commands and adds functionalities which aren't in a coffer environment by default.
 
-For more information about templates checkout the [template documentation](https://github.com/Max00355/docs/Templates.md)
+For more information about templates checkout the [template documentation](https://github.com/Max00355/Coffer/blob/master/docs/Templates.md)
 
 # Usage Tips
 
