@@ -1,4 +1,1 @@
-- Own copy tool using cp
-- Add ability for templates to copy folders
-- Add ability for template to copy files
-- Fix networking bug in chroot (doesn't have internet access)
+

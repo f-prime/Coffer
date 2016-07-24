@@ -14,7 +14,7 @@ def createDir(path):
 
 def copyBaseFiles(path):
     print text.copyingFiles
-    debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap precise {}"
+    debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap xenial {}"
     os.system(debCmd.format(path))
 
 def executeTemplate(template):
