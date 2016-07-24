@@ -20,12 +20,11 @@ Creating environments requires access to the internet.
 Creating Coffer environments also requires root access, so make sure that your account has `sudo` rights.
 
 1. In a new terminal type `sudo coffer create myenv`
+2. Enter the environment `sudo coffer enter myenv`
 
 Coffer will now download and install all of the requirements of an environment. This could take a bit depending on your computer and internet connection.
 
-2. Enter the environment `sudo coffer enter myenv` 
-
-And like that you are now in your first coffer environment! You can now install applications using `apt-get` or however else you'd like.
+Like that you are now in your first coffer environment! You can now install applications using `apt-get` or however else you'd like.
 
 # Introduction to templates
 
