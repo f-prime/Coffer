@@ -4,13 +4,14 @@ import enter
 import clone
 import remove
 import list as list_
-from utils import text, getRootDir
+from utils import text, getRootDir, setupEnv
 import os
 
 def checkArgs():
     rootDir = getRootDir.getRoot()
     if not os.path.exists(rootDir + "/.coffer"):
-        os.mkdir(rootDir + "/.coffer")
+        print text.settingUpEnv
+        setupEnv.setup()
 
     if len(sys.argv) < 2:
         sys.exit(text.helperText)

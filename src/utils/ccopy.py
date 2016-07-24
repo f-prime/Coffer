@@ -1,7 +1,14 @@
 import os
+import shutil
 
-def copy(orig, dest):
+def copy(orig, dest, useShutil=False):
     if os.path.isdir(orig):
-        os.system("cp -rf {} {}".format(orig, dest))
+        if useShutil:
+            shutil.copytree(orig, dest, symlinks=True)
+        else:
+            os.popen("cp -rf {} {}".format(orig, dest))
     else:
-        os.system("cp {} {}".format(orig, dest))
+        if useShutil:
+            shutil.copy(orig, dest)
+        else:
+            os.popen("cp {} {}".format(orig, dest))

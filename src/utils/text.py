@@ -1,3 +1,5 @@
+settingUpEnv = "Setting up environment"
+downloadingFiles = "Downloading necessary files"
 helperText = """Coffer Help
 
 coffer create <name> [-t <template>]

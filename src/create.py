@@ -14,10 +14,9 @@ def createDir(path):
 
 def copyBaseFiles(path):
     print text.copyingFiles
-    for directory in ["/bin", "/lib", "/lib64", "/var", "/etc", "/usr", "/dev"]:
-        print "Copying {}".format(directory)
-        ccopy.copy(directory, path + directory)        
-        
+    debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap precise {}"
+    os.system(debCmd.format(path))
+
 def executeTemplate(template):
     try:
         imp.load_source(template.split(".")[0], template)
