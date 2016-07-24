@@ -1,5 +1,6 @@
 settingUpEnv = "Setting up environment"
 downloadingFiles = "Downloading necessary files"
+version = "1.0.0"
 helperText = """Coffer Help
 
 coffer create <name> [-t <template>]
@@ -7,6 +8,7 @@ coffer enter <name> [-c <command>]
 coffer list
 coffer clone <name> <clone_name>
 coffer remove <name>
+coffer version
 """
 
 invalidTemplate = "Template is either invalid or does not exist"

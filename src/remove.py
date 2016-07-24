@@ -1,4 +1,4 @@
-from utils import getRootDir, text
+from utils import getRootDir, text, isRoot
 import os
 import shutil
 import sys
@@ -14,6 +14,9 @@ def remove():
     rootDir = getRootDir.getRoot() + "/.coffer/envs"
     if len(sys.argv) < 3:
         sys.exit(text.removeHelper)
+    if not isRoot.isRoot():
+        sys.exit(text.notRoot)
+
     name = sys.argv[2]
     if not checkIfExists(rootDir + "/" + name):
         sys.exit(text.envDoesntExist)

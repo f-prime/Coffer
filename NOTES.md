@@ -1,1 +1,3 @@
-
+- Write Docs
+- Update README
+- Create setup.py for pip

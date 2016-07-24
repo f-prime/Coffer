@@ -1,4 +1,4 @@
-from utils import getRootDir, text, ccopy
+from utils import getRootDir, text, ccopy, isRoot
 import shutil
 import sys
 import os
@@ -13,6 +13,8 @@ def envExists(path):
 def clone():
     if len(sys.argv) < 4:
         sys.exit(text.cloneHelper)
+    if not isRoot.isRoot():
+        sys.exit(text.notRoot)
 
     name = sys.argv[2]
     clone = sys.argv[3]

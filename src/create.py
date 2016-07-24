@@ -1,5 +1,5 @@
 import os
-from utils import getRootDir, text, getArg, ccopy, templateUtils
+from utils import getRootDir, text, getArg, ccopy, templateUtils, isRoot
 import sys
 import re
 import string
@@ -42,6 +42,8 @@ def create():
     template = getArg.getArg("-t")
     if len(sys.argv) < 3:
         sys.exit(text.createHelper)
+    if not isRoot.isRoot():
+        sys.exit(text.notRoot)
     name = sys.argv[2]
     path = root + "/" + name
     if not createDir(path):

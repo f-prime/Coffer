@@ -4,6 +4,7 @@ import enter
 import clone
 import remove
 import list as list_
+import version
 from utils import text, getRootDir, setupEnv
 import os
 
@@ -22,6 +23,7 @@ def checkArgs():
         "enter":enter.enter,
         "remove":remove.remove,
         "list":list_.list,
+        "version":version.version,
     }
 
     mainCmd = sys.argv[1]
