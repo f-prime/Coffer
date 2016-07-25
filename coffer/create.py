@@ -22,7 +22,7 @@ def copyBaseFiles(path):
     else:
         arch = "i386"
         
-    debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap --arch=" + arch " precise {}"
+    debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap --arch=" + arch + " precise {}"
     os.system(debCmd.format(path))
 
     # Debootstrap does not install a decent source.list, so we have to do it here
