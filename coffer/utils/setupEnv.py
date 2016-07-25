@@ -1,5 +1,5 @@
 import os
-import urllib
+import urllib.request as urllib
 from coffer.utils import getRootDir
 import tarfile
 from coffer.utils import text
