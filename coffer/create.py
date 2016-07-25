@@ -27,8 +27,8 @@ def copyBaseFiles(path):
 
     # Debootstrap does not install a decent source.list, so we have to do it here
 
-    with open(path + "/etc/apt/sources.list", 'w') as f:
-        f.write(str(urllib.urlopen("https://help.ubuntu.com/12.04/sample/sources.list").read()))
+    with open(path + "/etc/apt/sources.list", 'wb') as f:
+        f.write(urllib.urlopen("https://help.ubuntu.com/12.04/sample/sources.list").read())
 
     # Then we have to add keys since we are using a  new source list.
 
