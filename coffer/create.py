@@ -15,7 +15,7 @@ def createDir(path):
 
 def copyBaseFiles(path):
     print (text.copyingFiles)
-    debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap precise {}"
+    debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap --arch=i386 precise {}"
     os.system(debCmd.format(path))
 
     # Debootstrap does not install a decent source.list, so we have to do it here
