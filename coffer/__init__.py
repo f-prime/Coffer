@@ -3,6 +3,6 @@ import clone
 import coffer
 import create
 import enter
-import list
+import ls
 import remove
 import version

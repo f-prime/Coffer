@@ -1,7 +1,7 @@
 import os
 from utils import getRootDir, text
 
-def list():
+def ls():
     print text.availableEnvironments
     check = os.listdir(getRootDir.getRoot() + "/.coffer/envs")
     if len(check) == 0:

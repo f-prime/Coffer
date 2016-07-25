@@ -3,7 +3,7 @@ import create
 import enter
 import clone
 import remove
-import list as list_
+import ls
 import version
 from utils import text, getRootDir, setupEnv
 import os
@@ -22,7 +22,7 @@ def checkArgs():
         "clone":clone.clone,
         "enter":enter.enter,
         "remove":remove.remove,
-        "list":list_.list,
+        "list":ls.ls,
         "version":version.version,
     }
 
