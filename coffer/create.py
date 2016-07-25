@@ -4,7 +4,7 @@ import sys
 import re
 import string
 import imp
-import urllib.request
+import urllib.request as urllib
 
 def createDir(path):
     print (text.createDir)
