@@ -4,7 +4,7 @@ import shutil
 import sys
 
 def removeDir(path):
-    print text.removingEnv
+    print (text.removingEnv)
     shutil.rmtree(path)
 
 def checkIfExists(path):
@@ -21,4 +21,4 @@ def remove():
     if not checkIfExists(rootDir + "/" + name):
         sys.exit(text.envDoesntExist)
     removeDir(rootDir + "/" + name)
-    print text.removed
+    print (text.removed)

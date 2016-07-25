@@ -11,7 +11,7 @@ import os
 def checkArgs():
     rootDir = getRootDir.getRoot()
     if not os.path.exists(rootDir + "/.coffer"):
-        print text.settingUpEnv
+        print(text.settingUpEnv)
         setupEnv.setup()
 
     if len(sys.argv) < 2:

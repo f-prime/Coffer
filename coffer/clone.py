@@ -4,7 +4,7 @@ import sys
 import os
 
 def copyEnv(path, to):
-    print text.cloning
+    print(text.cloning)
     ccopy.copy(path, to)
 
 def envExists(path):
@@ -28,4 +28,4 @@ def clone():
         sys.exit(text.envAlreadyExistsVar.format(clone))
 
     copyEnv(path, clonePath)
-    print text.cloned
+    print(text.cloned)

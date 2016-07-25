@@ -8,7 +8,7 @@ def setup():
     root = getRootDir.getRoot()
     os.mkdir(root + "/.coffer")
     os.mkdir(root + "/.coffer/envs")
-    print text.downloadingFiles
+    print (text.downloadingFiles)
     deboot = urllib.urlopen("http://ftp.debian.org/debian/pool/main/d/debootstrap/debootstrap_1.0.81~bpo8+1.tar.gz").read()
     path = getRootDir.getRoot() + "/.coffer/deboot.tar"
     with open(path, 'wb') as tarf:

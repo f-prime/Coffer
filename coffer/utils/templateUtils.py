@@ -8,7 +8,7 @@ import ccopy
 
 def copyProgram(path):
     if not os.path.exists(path):
-        print text.programDoesNotExist.format(path)
+        print (text.programDoesNotExist.format(path))
     else:
         deps = os.popen("ldd {}".format(path)).read()
         deps = deps.replace("\t", "").replace("\n", " ")
@@ -25,7 +25,7 @@ def copyProgram(path):
 
 def copyFile(path):
     if not os.path.exists(path):
-        print text.fileDoesNotExist.format(path)
+        print (text.fileDoesNotExist.format(path))
     else:
         split = path.split("/")
         split = split[:len(split)-1]
@@ -35,7 +35,7 @@ def copyFile(path):
 
 def copyDir(path):
     if not os.path.exists(path):
-        print text.folderDoesNotExist.format(path)
+        print (text.folderDoesNotExist.format(path))
     else:
         split = filter(None, path.split("/"))
         createPath(split[:-1])

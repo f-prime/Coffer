@@ -7,14 +7,14 @@ import imp
 import urllib
 
 def createDir(path):
-    print text.createDir
+    print (text.createDir)
     if not os.path.exists(path):
         os.mkdir(path)
         return True
     return False
 
 def copyBaseFiles(path):
-    print text.copyingFiles
+    print (text.copyingFiles)
     debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap precise {}"
     os.system(debCmd.format(path))
 
@@ -32,10 +32,10 @@ def copyBaseFiles(path):
 def executeTemplate(template):
     try:
         imp.load_source(template.split(".")[0], template)
-        print text.templateSuccess
-    except Exception, e:
-        print e
-        print text.invalidTemplate
+        print (text.templateSuccess)
+    except Exception as e:
+        print (e)
+        print (text.invalidTemplate)
 
 def create():
     root = getRootDir.getRoot() + "/.coffer/envs"
@@ -51,5 +51,5 @@ def create():
     copyBaseFiles(path)
     if template:
         executeTemplate(template)
-    print text.envCreated
+    print (text.envCreated)
 
