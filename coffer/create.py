@@ -5,6 +5,7 @@ import re
 import string
 import imp
 import urllib.request as urllib
+import platform
 
 def createDir(path):
     print (text.createDir)
@@ -15,7 +16,13 @@ def createDir(path):
 
 def copyBaseFiles(path):
     print (text.copyingFiles)
-    debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap --arch=i386 precise {}"
+    # Supports 64 bit and 32 bit, no arm yet (though should be an easy fix)
+    if platform.architecture()[0] == "64bit":
+        arch = "amd64"
+    else:
+        arch = "i386"
+        
+    debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap --arch=" + arch " precise {}"
     os.system(debCmd.format(path))
 
     # Debootstrap does not install a decent source.list, so we have to do it here
