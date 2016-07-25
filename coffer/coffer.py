@@ -5,6 +5,7 @@ from coffer import clone
 from coffer import remove
 from coffer import ls
 from coffer import version
+from coffer import rename
 from coffer.utils import text, getRootDir, setupEnv
 import os
 
@@ -24,6 +25,7 @@ def checkArgs():
         "remove":remove.remove,
         "list":ls.ls,
         "version":version.version,
+        "rename":rename.rename,
     }
 
     mainCmd = sys.argv[1]

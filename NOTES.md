@@ -1,3 +1,4 @@
-- Write Docs
-- Update README
-- Create setup.py for pip
+- Fix typos and grammar and commands in docs
+- added rename command
+- Check how it works on Fedora
+- Ability to execute templates on already existing coffer env `coffer enter <env> -t <template>`

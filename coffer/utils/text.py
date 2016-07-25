@@ -9,6 +9,7 @@ coffer list
 coffer clone <name> <clone_name>
 coffer remove <name>
 coffer version
+coffer rename
 """
 
 invalidTemplate = "Template is either invalid or does not exist"
@@ -30,9 +31,13 @@ noEnvs = "There aren't any environments currently created"
 cloneHelper = "Usage: coffer clone <name> <clone_name>"
 cloned = "Environment has been cloned successfully"
 cloning = "Cloning enviornment"
+nameAlreadyExists = "Can't rename to environment that already exists"
 
 availableEnvironments = "Available Environments"
 
+renameSuccessful = "Renamed Successfully"
+
+renameHelper = "Usage: coffer rename <name> <new name>" 
 createHelper = "Usage: coffer create <name> [-t <template>]"
 enterHelper = "Usage: coffer enter <name> [-c <command>]"
 removeHelper = "Usage: coffer remove <name>"

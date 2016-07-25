@@ -6,3 +6,4 @@ from coffer import enter
 from coffer import ls
 from coffer import remove
 from coffer import version
+from coffer import rename
