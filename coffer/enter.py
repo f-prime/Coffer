@@ -1,6 +1,6 @@
 import os
 import string
-from utils import text, getRootDir, isRoot, getArg
+from coffer.utils import text, getRootDir, isRoot, getArg
 import sys
 import re
 

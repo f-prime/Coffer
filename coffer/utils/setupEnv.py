@@ -1,8 +1,8 @@
 import os
 import urllib
-import getRootDir
+from coffer.utils import getRootDir
 import tarfile
-import text
+from coffer.utils import text
 
 def setup():
     root = getRootDir.getRoot()

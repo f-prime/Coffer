@@ -1,6 +1,6 @@
 settingUpEnv = "Setting up environment"
 downloadingFiles = "Downloading necessary files"
-version = "1.0.0"
+version = "1.1.0"
 helperText = """Coffer Help
 
 coffer create <name> [-t <template>]

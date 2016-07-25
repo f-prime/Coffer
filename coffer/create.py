@@ -1,5 +1,5 @@
 import os
-from utils import getRootDir, text, getArg, ccopy, templateUtils, isRoot
+from coffer.utils import getRootDir, text, getArg, ccopy, templateUtils, isRoot
 import sys
 import re
 import string

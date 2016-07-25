@@ -1,5 +1,5 @@
 import os
-from utils import getRootDir, text
+from coffer.utils import getRootDir, text
 
 def ls():
     print (text.availableEnvironments)

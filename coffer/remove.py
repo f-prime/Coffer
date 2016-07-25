@@ -1,4 +1,4 @@
-from utils import getRootDir, text, isRoot
+from coffer.utils import getRootDir, text, isRoot
 import os
 import shutil
 import sys

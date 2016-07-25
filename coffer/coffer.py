@@ -1,11 +1,11 @@
 import sys
-import create
-import enter
-import clone
-import remove
-import ls
-import version
-from utils import text, getRootDir, setupEnv
+from coffer import create
+from coffer import enter
+from coffer import clone
+from coffer import remove
+from coffer import ls
+from coffer import version
+from coffer.utils import text, getRootDir, setupEnv
 import os
 
 def checkArgs():

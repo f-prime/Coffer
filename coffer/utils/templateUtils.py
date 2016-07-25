@@ -1,10 +1,10 @@
 import sys
 import os
-import text
+from coffer.utils import text
 import re
 import shutil
-import getRootDir
-import ccopy
+from coffer.utils import getRootDir
+from coffer.utils import ccopy
 
 def copyProgram(path):
     if not os.path.exists(path):
