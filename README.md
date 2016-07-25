@@ -3,6 +3,13 @@ Overview
 
 A lightweight platform for creating isolated and portable development environments.
 
+Requirements
+============
+
+- Python 3
+- Linux or MacOS
+
+
 What is Coffer?
 ===============
 
