@@ -32,6 +32,7 @@ Now that we have our template created and saved we can use it to create an envir
 `coffer create coffer-env -t first-template.py`
 
 The above command will create the environment `coffer-env` and then execute the `first-template.py` template granted that it is in your current directory. 
+
 ### Template Utilities Functions
 
 Import coffer utils using `from coffer.utils import templateUtils`
@@ -60,4 +61,4 @@ Example: Copying `/etc/resolv.conf` will create `etc` in the environment then co
 
 `templateUtils.copyProgram(path_to_program)`
 
-Copy allows a template to copy a program outside of the environment into the environment along with all its dependencies. Example, `wget`.
+Copy allows a template to copy a program outside of the environment into the environment along with all its dependencies. Example: `/usr/bin/wget`.
