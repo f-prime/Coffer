@@ -1,9 +1,11 @@
+versions = ['karmic', 'wily', 'jessie-kfreebsd', 'sarge.buildd', 'maverick', 'oneiric', 'gutsy', 'quantal', 'hardy', 'jessie', 'precise', 'stretch', 'woody.buildd', 'dasyatis', 'utopic', 'lenny', 'jaunty', 'yakkety', 'warty.buildd', 'etch-m68k', 'oldstable', 'hoary', 'stable', 'warty', 'edgy', 'vivid', 'lucid', 'intrepid', 'woody', 'unstable', 'trusty', 'sarge.fakechroot', 'etch', 'xenial', 'breezy', 'feisty', 'wheezy', 'hoary.buildd', 'saucy', 'dapper', 'squeeze', 'natty', 'aequorea', 'sid', 'chromodoris', 'sarge', 'raring', 'bartholomea', 'potato', 'testing']
+
 settingUpEnv = "Setting up environment"
 downloadingFiles = "Downloading necessary files"
 version = "1.1.0"
 helperText = """Coffer Help
 
-coffer create <name> [-t <template>]
+coffer create <name> [-t <template> -v <ubuntu/debian version>]
 coffer enter <name> [-c <command>]
 coffer list
 coffer clone <name> <clone_name>
@@ -11,6 +13,8 @@ coffer remove <name>
 coffer version
 coffer rename
 """
+
+usingVersion = "Using version {}"
 
 invalidTemplate = "Template is either invalid or does not exist"
 templateSuccess = "Template has been executed successfully"
