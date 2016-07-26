@@ -1,4 +1,4 @@
-import getpass
+import os
 
 def isRoot():
-    return getpass.getuser() == "root"
+    return os.geteuid() == 0

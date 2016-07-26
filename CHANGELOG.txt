@@ -3,3 +3,4 @@
 - Fixed issue #1
 - Updated code base to Python 3
 - Added `rename` command to rename envs
+- Better root checking
