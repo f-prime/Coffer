@@ -41,12 +41,15 @@ def copyBaseFiles(path):
     templateUtils.executeCommand("apt-get update")
 
 def executeTemplate(template):
-    try:
-        imp.load_source(template.split(".")[0], template)
-        print (text.templateSuccess)
-    except Exception as e:
-        print (e)
-        print (text.invalidTemplate)
+    print (os.getcwd())
+    templateName = template.split("/")[-1]
+    templateName = templateName.split(".")[0]
+#    try:
+    imp.load_source(templateName, template)
+    print (text.templateSuccess)
+#    except Exception as e:
+#        print (e)
+#        print (text.invalidTemplate)
 
 def create():
     root = getRootDir.getRoot() + "/.coffer/envs"

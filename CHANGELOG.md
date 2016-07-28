@@ -1,3 +1,8 @@
+# 1.1.1
+
+- Clone waits until environment has been cloned before closing
+- Templates not working bug has been fixed
+
 # 1.1.0
 
 - Fixed issue #1

@@ -2,7 +2,7 @@ versions = ['karmic', 'wily', 'jessie-kfreebsd', 'sarge.buildd', 'maverick', 'on
 
 settingUpEnv = "Setting up environment"
 downloadingFiles = "Downloading necessary files"
-version = "1.1.0"
+version = "1.1.1"
 helperText = """Coffer Help
 
 coffer create <name> [-t <template> -v <ubuntu/debian version>]

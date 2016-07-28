@@ -48,5 +48,5 @@ Current Status
 Coffer is under very heavy development, and receiving frequent updates. The code in the `master` branch is considered the most stable, and in it's current state Coffer is ready for actual use.
 In fact, Coffer development is happening in a Coffer container as of right now. If there are any bugs, please create issues about them.
 
-Verson: 1.1.0
+Verson: 1.1.1
 
