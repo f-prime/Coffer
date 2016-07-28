@@ -35,21 +35,17 @@ def copyBaseFiles(path):
         f.write(urllib.urlopen("https://help.ubuntu.com/12.04/sample/sources.list").read())
 
     # Then we have to add keys since we are using a  new source list.
+    # This should only be a temp fix
 
     templateUtils.executeCommand("gpg --keyserver keyserver.ubuntu.com --recv 3E5C1192")
     templateUtils.executeCommand("gpg --export --armor 3E5C1192 | sudo apt-key add -")
     templateUtils.executeCommand("apt-get update")
 
 def executeTemplate(template):
-    print (os.getcwd())
     templateName = template.split("/")[-1]
     templateName = templateName.split(".")[0]
-#    try:
-    imp.load_source(templateName, template)
+    imp.load_source(templateName, template) # This could break, but I'd rather allow it to break
     print (text.templateSuccess)
-#    except Exception as e:
-#        print (e)
-#        print (text.invalidTemplate)
 
 def create():
     root = getRootDir.getRoot() + "/.coffer/envs"

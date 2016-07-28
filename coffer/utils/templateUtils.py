@@ -56,10 +56,10 @@ def executeCommand(command):
     cwd = os.getcwd()
     rr = os.open("/", os.O_RDONLY)
     os.chroot(getRootDir.getRoot() + "/.coffer/envs/" + getEnvName())
+    os.chdir("/")
     os.system(command)
     os.fchdir(rr)
     os.chroot(".")
-    os.close(rr)
     os.chdir(cwd)
 
 def getEnvName():

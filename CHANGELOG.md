@@ -1,7 +1,7 @@
 # 1.1.1
 
 - Clone waits until environment has been cloned before closing
-- Templates not working bug has been fixed
+- Fixed issue with templates that prevented multiple `template.executeCommand` functions to be called
 
 # 1.1.0
 
