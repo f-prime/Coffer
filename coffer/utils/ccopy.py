@@ -6,9 +6,9 @@ def copy(orig, dest, useShutil=False):
         if useShutil:
             shutil.copytree(orig, dest, symlinks=True)
         else:
-            os.popen("cp -rf {} {}".format(orig, dest))
+            os.system("cp -rf {} {}".format(orig, dest))
     else:
         if useShutil:
             shutil.copy(orig, dest)
         else:
-            os.popen("cp {} {}".format(orig, dest))
+            os.system("cp {} {}".format(orig, dest))
