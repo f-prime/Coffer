@@ -1,7 +1,7 @@
 Overview
 =====
 
-![](https://img.shields.io/badge/version-1.1.1-brightgreen.svg) [![](https://img.shields.io/badge/chat-gitter-orange.svg)](https://gitter.im/cofferproject/Lobby)
+![](https://img.shields.io/badge/version-1.1.1-brightgreen.svg) [![](https://img.shields.io/badge/chat-gitter-orange.svg)](https://gitter.im/cofferproject/Lobby) [![](https://img.shields.io/badge/twitter-cofferproject-blue.svg)](http://twitter.com/cofferproject)
 
 A lightweight platform for creating isolated and portable development environments.
 
@@ -49,6 +49,4 @@ Current Status
 
 Coffer is under very heavy development, and receiving frequent updates. The code in the `master` branch is considered the most stable, and in it's current state Coffer is ready for actual use.
 In fact, Coffer development is happening in a Coffer container as of right now. If there are any bugs, please create issues about them.
-
-Verson: 1.1.1
 
