@@ -18,5 +18,6 @@
 - Templates aren't working (FIXED)
 - Fix command line argument parsing
 - Code cleanup 
+- Docs for adding a command
 
 ### Other Bugs

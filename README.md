@@ -1,6 +1,8 @@
 Overview
 =====
 
+![](https://img.shields.io/badge/version-1.1.1-brightgreen.svg) [![](https://img.shields.io/badge/chat-gitter-orange.svg)](https://gitter.im/cofferproject/Lobby)
+
 A lightweight platform for creating isolated and portable development environments.
 
 Requirements
