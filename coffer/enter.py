@@ -1,6 +1,6 @@
 import os
 import string
-from coffer.utils import text, getRootDir, isRoot, getArg
+from coffer.utils import text, getRootDir, isRoot, getFlag
 import sys
 import re
 
@@ -22,7 +22,7 @@ def enter():
     if not os.path.exists(path):
         sys.exit(text.envDoesntExist)
     enterChroot(path)
-    command = getArg.getArg("-c")
+    command = getFlag.getFlag("-c")
     if command:
         executeCommand(command=command)
     else:

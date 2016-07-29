@@ -1,5 +1,5 @@
 import os
-from coffer.utils import getRootDir, text, getArg, ccopy, templateUtils, isRoot, content
+from coffer.utils import getRootDir, text, getFlag, ccopy, templateUtils, isRoot, content
 import sys
 import re
 import string
@@ -22,7 +22,7 @@ def copyBaseFiles(path):
     else:
         arch = "i386"
     
-    version = getArg.getArg("-v")
+    version = getFlag.getFlag("-v")
     if version not in content.versions:
         version = "precise"
     print (text.usingVersion.format(version))
@@ -48,7 +48,7 @@ def executeTemplate(template):
 
 def create():
     root = getRootDir.getRoot() + "/.coffer/envs"
-    template = getArg.getArg("-t")
+    template = getFlag.getFlag("-t")
     if len(sys.argv) < 3:
         sys.exit(text.createHelper)
     if not isRoot.isRoot():
