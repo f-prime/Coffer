@@ -51,5 +51,5 @@ up to how you decide to implement the command but before you proceed here are a 
 - Create many small functions that do one thing very well. That will make it easier for future developers to develop tests and find bugs
 - Plan the command before you start to code. Make sure the idea is clear and that everthing has been planned out.
 - Ask for help when needed, and report problems as you find them. If you are stumped on something you can ask on our [gitter chat](https://gitter.im/cofferproject/Lobby).
-  As you find bugs create issues describing what the problem is so that other developers can be aware that they exist, and possible create a fix. 
+  As you find bugs create issues describing what the problem is so that other developers can be aware that they exist, and possibly create a fix. 
 - Test your command thoroughly before creating a pull request. 
