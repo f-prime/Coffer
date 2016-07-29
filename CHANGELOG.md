@@ -2,6 +2,12 @@
 
 - Clone waits until environment has been cloned before closing
 - Fixed issue with templates that prevented multiple `template.executeCommand` functions to be called
+- Coffer `create` fails gracefully when the environment cannot be created
+- Appropriate sources.list is downloaded for the version of the environment being downloaded.
+- Added `content` utility for managing content
+- Added function to getRootDir `getCofferRoot`
+- Added docs for utility functions
+- Added docs for adding a command to coffer
 
 # 1.1.0
 

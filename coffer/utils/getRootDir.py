@@ -6,3 +6,6 @@ def getRoot():
         return os.getcwd()
     else:
         return root
+
+def getCofferRoot():
+    return getRoot() + "/.coffer"

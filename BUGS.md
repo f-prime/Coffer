@@ -17,8 +17,7 @@
     Use: https://repogen.simplylinux.ch/generate.php 
   ) (FIXED)
 
-- Fix command line argument parsing
-- Code cleanup 
 - Docs for adding a command
+- Document utility functions (DONE)
 
 ### Other Bugs
