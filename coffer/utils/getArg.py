@@ -12,7 +12,6 @@ def getArg(num):
             skip = True
             continue
         args.append(s)
-    print args
     if num > len(args) - 1:
         return None
     return args[num]
