@@ -2,14 +2,17 @@ import sys
 
 def getArg(num):
     start = sys.argv[2:]
-    if num > len(start):
+    args = []
+    skip = False
+    for s in start:
+        if skip:
+            skip = False
+            continue
+        if s.startswith("-"):
+            skip = True
+            continue
+        args.append(s)
+    print args
+    if num > len(args) - 1:
         return None
-    on = 0
-    while on < num:
-        if start[on].startswith("-"):
-            on += 2
-            if on > len(start):
-                return None
-        else:
-            on += 1
-    return start[on]
+    return args[num]
