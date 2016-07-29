@@ -54,4 +54,7 @@ up to how you decide to implement the command but before you proceed here are a 
 - Plan the command before you start to code. Make sure the idea is clear and that everthing has been planned out.
 - Ask for help when needed, and report problems as you find them. If you are stumped on something you can ask on our [gitter chat](https://gitter.im/cofferproject/Lobby).
   As you find bugs create issues describing what the problem is so that other developers can be aware that they exist, and possibly create a fix. 
-- Test your command thoroughly before creating a pull request. 
+- Test your command thoroughly before creating a pull request.
+- All commands are to be parsed as follows: `coffer <command> <arg1> <arg2..n> <flag1> <flag2..n>` 
+- All of the components that make up a command are part of the `sys.argv` array. So for example, if you'd like to get the argument right after the command it might look
+  something like this: `argument = sys.argv[2]` Assuming the command looks like: `coffer <command> <argument>` 

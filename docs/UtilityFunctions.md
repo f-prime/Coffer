@@ -1,6 +1,6 @@
 # Overview
 
-Coffer has utility functions that make it easier 
+Coffer has utility functions that make it easier to perform many common tasks when developing a coffer command. 
 
 ## ccopy
 
@@ -21,6 +21,7 @@ Utility used for extracting value of argument flags from a command.
 `getArg.getArg(flag)`
 
 Example: `getArg.getArg("-v")`
+
 Returns: Value of flag
 
 ## getRootDir
