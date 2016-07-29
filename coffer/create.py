@@ -1,5 +1,5 @@
 import os
-from coffer.utils import getRootDir, text, getArg, ccopy, templateUtils, isRoot
+from coffer.utils import getRootDir, text, getArg, ccopy, templateUtils, isRoot, content
 import sys
 import re
 import string
@@ -23,23 +23,22 @@ def copyBaseFiles(path):
         arch = "i386"
     
     version = getArg.getArg("-v")
-    if version not in text.versions:
+    if version not in content.versions:
         version = "precise"
     print (text.usingVersion.format(version))
     debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap --arch=" + arch + " {} {}"
     os.system(debCmd.format(version, path))
+    getSourceList(path, version)
 
-    # Debootstrap does not install a decent source.list, so we have to do it here
-
-    with open(path + "/etc/apt/sources.list", 'wb') as f:
-        f.write(urllib.urlopen("https://help.ubuntu.com/12.04/sample/sources.list").read())
-
-    # Then we have to add keys since we are using a  new source list.
-    # This should only be a temp fix
-
-    templateUtils.executeCommand("gpg --keyserver keyserver.ubuntu.com --recv 3E5C1192")
-    templateUtils.executeCommand("gpg --export --armor 3E5C1192 | sudo apt-key add -")
-    templateUtils.executeCommand("apt-get update")
+def getSourceList(path, version):
+    version = version.lower()
+    if not os.path.exists(path + "/etc/apt/"):
+        sys.exit(text.failedToCreate)
+    
+    if version in content.listUrls:
+        with open(path + "/etc/apt/sources.list", 'wb') as f:
+            source = urllib.urlopen(content.listUrls[version]).read()
+            f.write(source)
 
 def executeTemplate(template):
     templateName = template.split("/")[-1]

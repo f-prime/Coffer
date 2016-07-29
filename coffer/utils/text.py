@@ -1,5 +1,3 @@
-versions = ['karmic', 'wily', 'jessie-kfreebsd', 'sarge.buildd', 'maverick', 'oneiric', 'gutsy', 'quantal', 'hardy', 'jessie', 'precise', 'stretch', 'woody.buildd', 'dasyatis', 'utopic', 'lenny', 'jaunty', 'yakkety', 'warty.buildd', 'etch-m68k', 'oldstable', 'hoary', 'stable', 'warty', 'edgy', 'vivid', 'lucid', 'intrepid', 'woody', 'unstable', 'trusty', 'sarge.fakechroot', 'etch', 'xenial', 'breezy', 'feisty', 'wheezy', 'hoary.buildd', 'saucy', 'dapper', 'squeeze', 'natty', 'aequorea', 'sid', 'chromodoris', 'sarge', 'raring', 'bartholomea', 'potato', 'testing']
-
 settingUpEnv = "Setting up environment"
 downloadingFiles = "Downloading necessary files"
 version = "1.1.1"
@@ -15,6 +13,8 @@ coffer rename
 """
 
 usingVersion = "Using version {}"
+
+failedToCreate = "Failed to create environmemnt. This could be due to the distribution of debian/ubuntu being installed. Try to select a different version with the -v argument"
 
 invalidTemplate = "Template is either invalid or does not exist"
 templateSuccess = "Template has been executed successfully"
