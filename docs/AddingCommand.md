@@ -2,6 +2,8 @@
 
 Commands are what add functionality to coffer. All commands are modules and are very straight forward to start developing. 
 
+An example command execution looks like: `coffer create environment -v jessie`
+
 # Adding Commands
 
 ## Create the module file
