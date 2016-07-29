@@ -1,5 +1,6 @@
 # Features to be implemented
 
+- Ability to execute templates on already existing coffer env `coffer enter <env> -t <template>`
 - Add flag to `create` for selecting repo (minor)
 - Add flag to `create` to select architecture (minor)
 - Add flag to `create` to select download mirror (minor)
