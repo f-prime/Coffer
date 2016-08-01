@@ -23,10 +23,16 @@ def copyBaseFiles(path):
         arch = "i386"
     
     version = getFlag.getFlag("-v")
+    architecture = getFlag.getFlag("-a")
+    repo = getFlag.getFlag("-r") 
     if version not in content.versions:
-        version = "precise"
+        version = "xenial"
+    if architecture and architecture in content.architectures:
+        arch = content.architectures.get(architecture)
     print (text.usingVersion.format(version))
     debCmd = "bash " + getRootDir.getCofferDir() + "debootstrap/debootstrap --arch=" + arch + " {} {}"
+    if repo:
+        debCmd += " " + repo
     os.system(debCmd.format(version, path))
     getSourceList(path, version)
 

@@ -3,8 +3,8 @@ downloadingFiles = "Downloading necessary files"
 version = "1.2.1"
 helperText = """Coffer Help
 
-coffer create <name> [-t <template> -v <ubuntu/debian version>]
-coffer enter <name> [-c <command>]
+coffer create <name> [-t <template> -v <ubuntu/debian version> -a <architecture> -r <repository>]
+coffer enter <name> [-c <command> -t <template>]
 coffer list
 coffer clone <name> <clone_name>
 coffer remove <name>

@@ -9,4 +9,11 @@ listUrls = {
     "stretch":"https://debgen.simplylinux.ch/txt/stretch/sources_6254adc7f61eaf8f0643f312e0353eb87c7ef22f.txt",
     "sid":"https://debgen.simplylinux.ch/txt/sid/sources_885f89dfe39f95ee61c37ff07c11562d74ceda13.txt",
 }
-
+architectures = {
+    "32bit":"i386",
+    "64bit":"amd64",
+    "x86":"i386",
+    "x86_64":"amd64",
+    "i386":"i386",
+    "amd64":"amd64",
+}

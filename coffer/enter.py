@@ -1,6 +1,7 @@
 import os
 import string
 from coffer.utils import text, getRootDir, isRoot, getFlag, getArg
+from coffer import create
 import sys
 import re
 
@@ -18,6 +19,9 @@ def enter():
     name = getArg.getArg(0)
     if not name:
         sys.exit(text.enterHelper)
+    template = getFlag.getFlag("-t")
+    if template:
+        create.executeTemplate(template)
     path = rootDir + name
     if not os.path.exists(path):
         sys.exit(text.envDoesntExist)
