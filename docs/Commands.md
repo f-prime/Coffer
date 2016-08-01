@@ -12,6 +12,10 @@ Flags:
 
 `-v` - Select the version of ubuntu/debian to be installed in an environment `coffer create <name> -v wheezy` NOTE: This flag fails silently, if you insert an invalid version it will default to Ubuntu Precise.
 
+`-r` - Select debian/ubuntu repository to download from
+
+`-a` - Select architecture of environment (Currently only x86 and x86_64 are supported)
+
 Creates an environment from scratch with the name `<name>`
 
 ### Clone
@@ -27,6 +31,8 @@ Usage: `coffer enter <name>`
 Flags:
 
 `-c` - Execute a command in your environment as you enter it. `coffer enter <name> -c "cd ~/project;git pull origin master"` NOTE: Unless you put a `/bin/bash` in the command `-c` will not spawn a Bash shell.  
+
+`-t` - Executes a template before entering an environment.
 
 Enters a Coffer environment and launches a Bash shell. 
 

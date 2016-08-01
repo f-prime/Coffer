@@ -6,7 +6,7 @@
 - Tests (NOT DONE #7)
 - Code Cleanup
 - Default settings now use ubuntu xenial instead of ubuntu precise
-- Documented changed (NOT DONE #6
+- Documented changed
 
 # 1.1.1
 

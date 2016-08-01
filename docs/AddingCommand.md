@@ -19,17 +19,19 @@ Naming is very important for readability so be sure abide by this system.
 
 ## Add module to coffer.py
 
-Now we need to make the command callable. This is done in `coffer.py`
-by importing the module and modifying the `functions` dictionary. 
+Now we need to make the command callable. This is done in `utils/commands.py`
+by importing the module and modifying the `commands` dictionary. 
 
-Adding to the functions dictionary should follow this pattern:
+Adding to the commands dictionary should follow this pattern:
 
 `<command>:<entry point function>`
 
-So, for out `version.py` example it would look something like this:
+So, for our `version.py` example it would look something like this:
 
 ```
-functions {
+from coffer import version
+
+commands = {
      
   "version":version.version  
 
