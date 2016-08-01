@@ -26,7 +26,7 @@ Adding to the commands dictionary should follow this pattern:
 
 `<command>:<entry point function>`
 
-So, for our `version.py` example it would look something like this:
+So, for our `version.py` example if `version.py` was our only command then `commands.py` would look something like this:
 
 ```
 from coffer import version
