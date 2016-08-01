@@ -1,7 +1,7 @@
 Overview
 =====
 
-![](https://img.shields.io/badge/version-1.2.1-brightgreen.svg) ![](https://img.shields.io/badge/freenode-%23coffer-red.svg) [![](https://img.shields.io/badge/chat-gitter-orange.svg)](https://gitter.im/cofferproject/Lobby) [![](https://img.shields.io/badge/twitter-cofferproject-blue.svg)](http://twitter.com/cofferproject)
+![](https://img.shields.io/badge/version-1.2.1-brightgreen.svg) [![](https://img.shields.io/badge/irc-%23coffer-red.svg)](https://webchat.freenode.net/) [![](https://img.shields.io/badge/twitter-cofferproject-blue.svg)](http://twitter.com/cofferproject)
 
 A lightweight platform for creating isolated and portable development environments.
 
