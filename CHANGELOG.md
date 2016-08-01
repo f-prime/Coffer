@@ -7,6 +7,7 @@
 - Code Cleanup
 - Default settings now use ubuntu xenial instead of ubuntu precise
 - Documented changed
+- Now treats source.list as content in `content.py` instead of pulling from a URL that could be down.
 
 # 1.1.1
 

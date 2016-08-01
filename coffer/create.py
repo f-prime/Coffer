@@ -41,10 +41,9 @@ def getSourceList(path, version):
     if not os.path.exists(path + "/etc/apt/"):
         sys.exit(text.failedToCreate)
     
-    if version in content.listUrls:
-        with open(path + "/etc/apt/sources.list", 'wb') as f:
-            source = urllib.urlopen(content.listUrls[version]).read()
-            f.write(source)
+    if version in content.sources:
+        with open(path + "/etc/apt/sources.list", 'w') as f:
+            f.write(content.sources[version])
 
 def executeTemplate(template):
     templateName = template.split("/")[-1]
