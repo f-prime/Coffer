@@ -1,5 +1,10 @@
 import sys
 
+def getCommandName():
+    if len(sys.argv) >= 2:
+        return sys.argv[1]
+    return None
+
 def getArg(num):
     start = sys.argv[2:]
     args = []

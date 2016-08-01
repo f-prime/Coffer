@@ -1,5 +1,5 @@
 import os
-from coffer.utils import getRootDir, text, getFlag, ccopy, templateUtils, isRoot, content
+from coffer.utils import getRootDir, text, getFlag, ccopy, templateUtils, isRoot, content, getArg
 import sys
 import re
 import string
@@ -26,7 +26,7 @@ def copyBaseFiles(path):
     if version not in content.versions:
         version = "precise"
     print (text.usingVersion.format(version))
-    debCmd = "bash " + getRootDir.getRoot() + "/.coffer/debootstrap/debootstrap --arch=" + arch + " {} {}"
+    debCmd = "bash " + getRootDir.getCofferDir() + "debootstrap/debootstrap --arch=" + arch + " {} {}"
     os.system(debCmd.format(version, path))
     getSourceList(path, version)
 
@@ -43,18 +43,18 @@ def getSourceList(path, version):
 def executeTemplate(template):
     templateName = template.split("/")[-1]
     templateName = templateName.split(".")[0]
-    imp.load_source(templateName, template) # This could break, but I'd rather allow it to break
+    imp.load_source(templateName, template) # This could break, but I'd rather allow it to break than do a try, except
     print (text.templateSuccess)
 
 def create():
-    root = getRootDir.getRoot() + "/.coffer/envs"
+    root = getRootDir.getEnvsDir()
     template = getFlag.getFlag("-t")
-    if len(sys.argv) < 3:
+    name = getArg.getArg(0)
+    if not name:
         sys.exit(text.createHelper)
     if not isRoot.isRoot():
         sys.exit(text.notRoot)
-    name = sys.argv[2]
-    path = root + "/" + name
+    path = root + name
     if not createDir(path):
         sys.exit(text.envAlreadyExists)
     copyBaseFiles(path)

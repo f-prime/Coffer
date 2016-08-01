@@ -1,4 +1,4 @@
-from coffer.utils import isRoot, text, getRootDir
+from coffer.utils import isRoot, text, getRootDir, getArg
 import os
 import sys
 
@@ -8,14 +8,13 @@ def renameDir(path, name):
 def rename():
     if not isRoot.isRoot():
         sys.exit(text.notRoot)
-    root = getRootDir.getRoot() + "/.coffer/envs/"
-
-    if len(sys.argv) < 4:
-        sys.exit(text.renameHelper)
-
-    name = sys.argv[2]
-    newName = sys.argv[3]
+    root = getRootDir.getEnvsDir()
     
+    name = getArg.getArg(0)
+    newName = getArg.getArg(1)
+
+    if not name or not newName:
+        sys.exit(text.renameHelper)
 
     if not os.path.exists(root + name):
         sys.exit(text.envDoesntExist)

@@ -1,6 +1,6 @@
 import os
 import string
-from coffer.utils import text, getRootDir, isRoot, getFlag
+from coffer.utils import text, getRootDir, isRoot, getFlag, getArg
 import sys
 import re
 
@@ -14,11 +14,11 @@ def executeCommand(command="/bin/bash"):
 def enter():
     if not isRoot.isRoot():
         sys.exit(text.notRoot)
-    rootDir = getRootDir.getRoot() + "/.coffer/envs"
-    if len(sys.argv) < 3:
+    rootDir = getRootDir.getEnvsDir()
+    name = getArg.getArg(0)
+    if not name:
         sys.exit(text.enterHelper)
-    name = sys.argv[2]
-    path = rootDir + "/" + name
+    path = rootDir + name
     if not os.path.exists(path):
         sys.exit(text.envDoesntExist)
     enterChroot(path)

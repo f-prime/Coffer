@@ -3,7 +3,7 @@ from coffer.utils import getRootDir, text
 
 def ls():
     print (text.availableEnvironments)
-    check = os.listdir(getRootDir.getRoot() + "/.coffer/envs")
+    check = os.listdir(getRootDir.getEnvsDir())
     if len(check) == 0:
         print (text.noEnvs)
     else:

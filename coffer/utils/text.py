@@ -1,6 +1,6 @@
 settingUpEnv = "Setting up environment"
 downloadingFiles = "Downloading necessary files"
-version = "1.1.1"
+version = "1.2.1"
 helperText = """Coffer Help
 
 coffer create <name> [-t <template> -v <ubuntu/debian version>]
@@ -10,6 +10,7 @@ coffer clone <name> <clone_name>
 coffer remove <name>
 coffer version
 coffer rename
+
 """
 
 usingVersion = "Using version {}"
@@ -37,7 +38,7 @@ cloned = "Environment has been cloned successfully"
 cloning = "Cloning enviornment"
 nameAlreadyExists = "Can't rename to environment that already exists"
 
-availableEnvironments = "Available Environments"
+availableEnvironments = "Available Environments\n"
 
 renameSuccessful = "Renamed Successfully"
 

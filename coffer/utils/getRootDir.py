@@ -7,5 +7,8 @@ def getRoot():
     else:
         return root
 
-def getCofferRoot():
-    return getRoot() + "/.coffer"
+def getCofferDir():
+    return getRoot() + "/.coffer/"
+
+def getEnvsDir():
+    return getCofferDir() + "envs/"

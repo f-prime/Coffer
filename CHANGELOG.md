@@ -1,3 +1,13 @@
+# 1.2.1
+
+- Ability to execute templates on already existing coffer env `coffer enter <env> -t <template>` (NOT DONE #5)
+- Add flag to `create` for selecting repo (NOT DONE #4)
+- Add flag to `create` to select architecture (NOT DONE #2)
+- Add flag to `create` to select download mirror (NOT DONE #3)
+- Tests (NOT DONE #6)
+- Code Cleanup
+
+
 # 1.1.1
 
 - Clone waits until environment has been cloned before closing

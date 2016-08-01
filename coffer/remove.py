@@ -1,4 +1,4 @@
-from coffer.utils import getRootDir, text, isRoot
+from coffer.utils import getRootDir, text, isRoot, getArg
 import os
 import shutil
 import sys
@@ -11,14 +11,16 @@ def checkIfExists(path):
     return os.path.exists(path)
 
 def remove():
-    rootDir = getRootDir.getRoot() + "/.coffer/envs"
-    if len(sys.argv) < 3:
+    rootDir = getRootDir.getEnvsDir()
+
+    name = getArg.getArg(0)
+
+    if not name:
         sys.exit(text.removeHelper)
     if not isRoot.isRoot():
         sys.exit(text.notRoot)
-
-    name = sys.argv[2]
-    if not checkIfExists(rootDir + "/" + name):
+    if not checkIfExists(rootDir + name):
         sys.exit(text.envDoesntExist)
-    removeDir(rootDir + "/" + name)
+    
+    removeDir(rootDir + name)
     print (text.removed)

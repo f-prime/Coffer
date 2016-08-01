@@ -1,4 +1,4 @@
-from coffer.utils import getRootDir, text, ccopy, isRoot
+from coffer.utils import getRootDir, text, ccopy, isRoot, getArg
 import shutil
 import sys
 import os
@@ -16,11 +16,11 @@ def clone():
     if not isRoot.isRoot():
         sys.exit(text.notRoot)
 
-    name = sys.argv[2]
-    clone = sys.argv[3]
+    name = getArg.getArg(0)
+    clone = getArg.getArg(1)
 
-    path = getRootDir.getRoot() + "/.coffer/envs/" + name
-    clonePath = getRootDir.getRoot() + "/.coffer/envs/" + clone
+    path = getRootDir.getEnvsDir() + name
+    clonePath = getRootDir.getEnvsDir() + clone
 
     if not envExists(path):
         sys.exit(text.envDoesntExistVar.format(name))
