@@ -3,7 +3,6 @@
 - Ability to execute templates on already existing coffer env `coffer enter <env> -t <template>`
 - Add flag to `create` for selecting repo
 - Add flag to `create` to select architecture
-- Tests (NOT DONE #7)
 - Code Cleanup
 - Default settings now use ubuntu xenial instead of ubuntu precise
 - Documented changed
