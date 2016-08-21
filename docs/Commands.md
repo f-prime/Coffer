@@ -34,6 +34,8 @@ Flags:
 
 `-t` - Executes a template before entering an environment.
 
+`-m` - Mounts a directory on the host system in the environment. `coffer enter <name> -m /proc`
+
 Enters a Coffer environment and launches a Bash shell. 
 
 ### List
