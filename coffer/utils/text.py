@@ -4,7 +4,7 @@ version = "1.2.1"
 helperText = """Coffer Help
 
 coffer create <name> [-t <template> -v <ubuntu/debian version> -a <architecture> -r <repository>]
-coffer enter <name> [-c <command> -t <template>]
+coffer enter <name> [-c <command> -t <template> -m <path to mount>]
 coffer list
 coffer clone <name> <clone_name>
 coffer remove <name>
@@ -12,6 +12,7 @@ coffer version
 coffer rename
 
 """
+unmounted = "Successfully unmounted {}"
 
 usingVersion = "Using version {}"
 

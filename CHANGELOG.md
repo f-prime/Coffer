@@ -1,3 +1,9 @@
+# 1.3.1
+
+- Added `-m` flag for mounting directories into env 
+- Added `getFlags` function for returning multiple values with the same flag
+- Auto unmounts directory when removing/cloning 
+
 # 1.2.1
 
 - Ability to execute templates on already existing coffer env `coffer enter <env> -t <template>`

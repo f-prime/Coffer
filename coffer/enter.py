@@ -12,6 +12,15 @@ def enterChroot(path):
 def executeCommand(command="/bin/bash"):
     os.system(command)
 
+def mount(directory, path):
+    os.system("mount --bind {} {}/{}".format(directory, path, directory))
+
+def checkMount(path):
+    toMount = getFlag.getFlags("-m")
+    if toMount:
+        for directory in toMount:
+            mount(directory, path)
+
 def enter():
     if not isRoot.isRoot():
         sys.exit(text.notRoot)
@@ -25,6 +34,7 @@ def enter():
     path = rootDir + name
     if not os.path.exists(path):
         sys.exit(text.envDoesntExist)
+    checkMount(path) 
     enterChroot(path)
     command = getFlag.getFlag("-c")
     if command:
