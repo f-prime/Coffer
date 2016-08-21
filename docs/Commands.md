@@ -2,6 +2,18 @@
 
 Below are the commands available to Coffer, and what they do.
 
+### Package
+
+Usage: `coffer package <name>`
+
+Packages an environment and creates file `<name>.coffer` for easier sending of environments.
+
+### Unpackage
+
+Usage: `coffer unpackage <name>`
+
+Unpackages `<name>` and creates an environment based on the package.
+
 ### Create
 
 Usage: `coffer create <name>`
