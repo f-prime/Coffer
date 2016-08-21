@@ -16,9 +16,13 @@ coffer unpackage <path_to_env>
 
 creatingPackage = "Package being created..."
 packaged = "Package created successfully"
+unpackagedSuccessful = "Unpackaged environment successfully"
+unpackaging = "Unpacking..."
 
 packageHelper = "Usage: coffer package <env>"
 unpackageHelper = "Usage: coffer unpackage <env>"
+
+packageDoesntExist = "That package does not exist"
 
 unmounted = "Successfully unmounted {}"
 

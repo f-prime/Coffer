@@ -1,3 +1,4 @@
+*.coffer
 build/
 __pycache__/
 Coffer.egg-info/
