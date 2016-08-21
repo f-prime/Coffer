@@ -2,6 +2,7 @@ import os
 import string
 from coffer.utils import text, getRootDir, isRoot, getFlag, getArg
 from coffer import create
+from coffer import remove
 import sys
 import re
 
@@ -13,7 +14,13 @@ def executeCommand(command="/bin/bash"):
     os.system(command)
 
 def mount(directory, path):
-    os.system("mount --bind {} {}/{}".format(directory, path, directory))
+    mounts = list(remove.getMounted(path))
+    mounted = (path + "/" + directory).replace("//", "/") in mounts
+    if not mounted:
+        os.system("mount --bind {} {}/{}".format(directory, path, directory))
+        print (text.mounted.format(directory))
+    else:
+        print (text.alreadyMounted.format(directory))
 
 def checkMount(path):
     toMount = getFlag.getFlags("-m")

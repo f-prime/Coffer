@@ -3,10 +3,8 @@
 - Added `-m` flag for mounting directories into env 
 - Added `getFlags` function for returning multiple values with the same flag
 - Auto unmounts directory when removing/cloning 
-- `package` command which compresses an env and allows for easier sending of an env (NOT DONE)
-- `open` command restores a packaged environment (NOT DONE)
-- Ability to remove multiple environments at once (NOT DONE)
-
+- `package` command which compresses an env and allows for easier sending of an env
+- `open` command restores a packaged environment
 
 # 1.2.1
 

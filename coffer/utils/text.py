@@ -19,6 +19,9 @@ packaged = "Package created successfully"
 unpackagedSuccessful = "Unpackaged environment successfully"
 unpackaging = "Unpacking..."
 
+alreadyMounted = "{} is already mounted"
+mounted = "{} mounted successfully"
+
 packageHelper = "Usage: coffer package <env>"
 unpackageHelper = "Usage: coffer unpackage <env>"
 
