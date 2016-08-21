@@ -20,7 +20,7 @@ def getMounted(path):
 
 def unmountAll(path):
     for m in getMounted(path):
-        print (text.umounted.format(m))
+        print (text.unmounted.format(m))
         os.system("umount {}".format(m))
 
 def remove():

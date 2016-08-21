@@ -1,4 +1,5 @@
 from coffer.utils import isRoot, text, getRootDir, getArg
+from coffer import remove
 import os
 import sys
 
@@ -21,6 +22,6 @@ def rename():
 
     if os.path.exists(root + newName):
         sys.exit(text.nameAlreadyExists)
-
+    remove.unmountAll(root + name)
     renameDir(root + name, root + newName)
     sys.exit(text.renameSuccessful)

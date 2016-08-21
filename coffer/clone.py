@@ -1,4 +1,5 @@
 from coffer.utils import getRootDir, text, ccopy, isRoot, getArg
+from coffer import remove
 import shutil
 import sys
 import os
@@ -26,6 +27,6 @@ def clone():
         sys.exit(text.envDoesntExistVar.format(name))
     if envExists(clonePath):
         sys.exit(text.envAlreadyExistsVar.format(clone))
-
+    remove.unmountAll(path)
     copyEnv(path, clonePath)
     print(text.cloned)
