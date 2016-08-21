@@ -35,5 +35,5 @@ def remove():
     if not checkIfExists(rootDir + name):
         sys.exit(text.envDoesntExist)
     unmountAll(rootDir + name)
-    #removeDir(rootDir + name)
+    removeDir(rootDir + name)
     print (text.removed)

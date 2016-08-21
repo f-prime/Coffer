@@ -5,6 +5,8 @@ from coffer import remove
 from coffer import ls
 from coffer import version
 from coffer import rename
+from coffer import package
+from coffer import unpackage
 
 commands = {
     "create":create.create,
@@ -14,5 +16,7 @@ commands = {
     "list":ls.ls,
     "version":version.version,
     "rename":rename.rename,
+    "package":package.package,
+    "unpackage":unpackage.unpackage,
 }
 

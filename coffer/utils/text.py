@@ -4,14 +4,22 @@ version = "1.2.1"
 helperText = """Coffer Help
 
 coffer create <name> [-t <template> -v <ubuntu/debian version> -a <architecture> -r <repository>]
-coffer enter <name> [-c <command> -t <template> -m <path to mount>]
+coffer enter <env> [-c <command> -t <template> -m <path to mount>]
 coffer list
-coffer clone <name> <clone_name>
-coffer remove <name>
+coffer clone <env> <clone_name>
+coffer remove <env>
 coffer version
 coffer rename
-
+coffer package <env>
+coffer unpackage <path_to_env>
 """
+
+creatingPackage = "Package being created..."
+packaged = "Package created successfully"
+
+packageHelper = "Usage: coffer package <env>"
+unpackageHelper = "Usage: coffer unpackage <env>"
+
 unmounted = "Successfully unmounted {}"
 
 usingVersion = "Using version {}"
