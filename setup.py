@@ -7,7 +7,7 @@ kwargs = {
 	"entry_points" : {"console_scripts" : ["coffer=coffer.coffer:checkArgs"]},
 	"name" : "Coffer",
 	"packages" : ["coffer", "coffer.utils"],
-	"version" : "1.3.1",
+	"version" : "1.3.2",
 }
 
 setup(**kwargs)

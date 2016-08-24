@@ -1,3 +1,7 @@
+# 1.3.2
+
+- Fixed bug in debootstrap that did not allow for the creating of an environment even with sudo
+
 # 1.3.1
 
 - Added `-m` flag for mounting directories into env 

@@ -1,6 +1,6 @@
 settingUpEnv = "Setting up environment"
 downloadingFiles = "Downloading necessary files"
-version = "1.3.1"
+version = "1.3.2"
 helperText = """Coffer Help
 
 coffer create <name> [-t <template> -v <ubuntu/debian version> -a <architecture> -r <repository>]
