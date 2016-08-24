@@ -16,7 +16,11 @@ def setup():
         tarf.write(deboot)
     tarfile.open(path).extractall(path=root)
     os.remove(path)
-    edit = open(root + "debootstrap/debootstrap").read()
+    edit = open(root + "debootstrap/debootstrap").readlines()
+    edit[488] = "#" + edit[488]
+    edit[489] = "#" + edit[489]
+    edit[490] = "#" + edit[490]
+    edit = "".join(edit)
     edit = "DEBOOTSTRAP_DIR={}\n".format(root + "debootstrap") + edit
     with open(root + "debootstrap/debootstrap", 'w') as w:
         w.write(edit) 
