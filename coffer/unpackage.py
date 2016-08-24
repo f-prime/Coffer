@@ -21,7 +21,7 @@ def unpackage():
     if not compressed:
         sys.exit(text.unpackageHelper)
     if not isRoot.isRoot():
-        sys.exit(text.noRoot)
+        sys.exit(text.notRoot)
     if not remove.checkIfExists(compressed):
         sys.exit(text.packageDoesntExist)
 
