@@ -2,6 +2,7 @@
 build/
 __pycache__/
 Coffer.egg-info/
+coffer-container.egg-info/
 dist/
 *.pyc
 *.swp
