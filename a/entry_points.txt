@@ -1,3 +1,0 @@
-[console_scripts]
-coffer = coffer.coffer:checkArgs
-
