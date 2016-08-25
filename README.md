@@ -11,6 +11,10 @@ Requirements
 - Python 3
 - Linux or MacOS
 
+Quick Start
+===========
+
+`pip install coffer-container`
 
 What is Coffer?
 ===============
