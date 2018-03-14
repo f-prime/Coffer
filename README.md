@@ -14,7 +14,13 @@ Requirements
 Quick Start
 ===========
 
+In Terminal
+
 `python3 setup.py install`
+
+`coffer create my_env`
+
+`coffer enter my_env`
 
 What is Coffer?
 ===============
