@@ -10,7 +10,7 @@ def setup():
     os.mkdir(root)
     os.mkdir(envs)
     print (text.downloadingFiles)
-    deboot = urllib.urlopen("http://ftp.debian.org/debian/pool/main/d/debootstrap/debootstrap_1.0.81~bpo8+1.tar.gz").read()
+    deboot = urllib.urlopen("http://ftp.debian.org/debian/pool/main/d/debootstrap/debootstrap_1.0.92~bpo9+1.tar.gz").read()
     path = root + "deboot.tar"
     with open(path, 'wb') as tarf:
         tarf.write(deboot)
