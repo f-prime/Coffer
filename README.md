@@ -9,12 +9,12 @@ Requirements
 ============
 
 - Python 3
-- Linux or MacOS
+- Linux (Tested on Ubuntu 17.1.0)
 
 Quick Start
 ===========
 
-`pip install coffer-container`
+`python3 setup.py install`
 
 What is Coffer?
 ===============
