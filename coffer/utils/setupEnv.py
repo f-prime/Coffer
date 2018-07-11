@@ -10,7 +10,7 @@ def setup():
     os.mkdir(root)
     os.mkdir(envs)
     print (text.downloadingFiles)
-    deboot = urllib.urlopen("https://github.com/f-prime/Coffer/tree/master/coffer/deps/debootstrap.tar.gz").read()
+    deboot = urllib.urlopen("https://github.com/f-prime/Coffer/blob/master/coffer/deps/debootstrap.tar.gz?raw=true").read()
     path = root + "deboot.tar"
     with open(path, 'wb') as tarf:
         tarf.write(deboot)
